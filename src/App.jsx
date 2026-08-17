@@ -17,10 +17,11 @@ function App() {
         <Header />
         <div className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<PrototypingLab />} />
             <Route path="/prototyping-lab" element={<PrototypingLab />} />
             <Route path="/nidhi-prayas-shala" element={<PrototypingLab />} />
             <Route path="/landing" element={<PrototypingLab />} />
+            <Route path="/overview" element={<Home />} />
             <Route path="/lab" element={<LabCapabilities />} />
             <Route path="/programs" element={<ProgramsAccess />} />
             <Route path="/projects" element={<ProjectsImpact />} />
