@@ -23,8 +23,7 @@ import {
   Factory, 
   Scale, 
   Microscope,
-  Send,
-  Sparkles
+  Send
 } from 'lucide-react'
 
 // 01 to 08 Process Steps
