@@ -1,9 +1,6 @@
 import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { 
-  Wrench, 
-  Layers, 
-  Settings, 
   ShieldCheck, 
   Activity, 
   Cpu, 
@@ -17,74 +14,16 @@ import {
   Lightbulb, 
   ExternalLink, 
   Check, 
-  CheckCircle,
+  CheckCircle, 
   FlaskConical, 
   Compass, 
   Factory, 
   Scale, 
-  Microscope,
-  Send
+  Microscope, 
+  Send,
+  Layers,
+  Settings
 } from 'lucide-react'
-
-// 01 to 08 Process Steps
-const METHODOLOGY_STEPS = [
-  {
-    step: "01",
-    tag: "IDENTIFY",
-    title: "Problem Definition",
-    desc: "Understand the real problem, user requirement, operating environment, constraints, and desired outcome.",
-    badge: "Problem First"
-  },
-  {
-    step: "02",
-    tag: "UNDERSTAND",
-    title: "Research + First Principles",
-    desc: "Study existing solutions, available technologies, scientific principles, constraints, and fundamental engineering relationships.",
-    badge: "Physics & Science"
-  },
-  {
-    step: "03",
-    tag: "EXPLORE",
-    title: "Possible Solutions",
-    desc: "Generate, compare, and shortlist technically feasible solution concepts against design criteria.",
-    badge: "Concept Architecture"
-  },
-  {
-    step: "04",
-    tag: "ENGINEER",
-    title: "Engineering Design",
-    desc: "Convert the selected concept into an engineered solution considering performance, materials, dimensions, tolerances, safety, usability, and manufacturability.",
-    badge: "CAD & Simulation"
-  },
-  {
-    step: "05",
-    tag: "VALIDATE",
-    title: "Manual / Laboratory Testing",
-    desc: "Test critical assumptions and revalidate the engineering approach. Where required, validation is supported through qualified laboratories connected with SJCE-STEP.",
-    badge: "Assumptions Test"
-  },
-  {
-    step: "06",
-    tag: "DETAIL",
-    title: "CAD + BOM + Manufacturing Plan",
-    desc: "Develop detailed CAD, engineering drawings, Bill of Materials (BOM), material specifications, and manufacturing requirements.",
-    badge: "DFM & Drawings"
-  },
-  {
-    step: "07",
-    tag: "BUILD",
-    title: "Prototype Development",
-    desc: "Select the appropriate manufacturing / prototyping process and build the physical functional prototype in our lab.",
-    badge: "Physical Fab"
-  },
-  {
-    step: "08",
-    tag: "ITERATE",
-    title: "Test → Learn → Improve → MVP",
-    desc: "Use test results and real observations to refine the design, fix weak points, and progressively reduce technical risk toward MVP.",
-    badge: "MVP Ready"
-  }
-];
 
 // Focus Areas
 const FOCUS_AREAS = [
@@ -221,43 +160,6 @@ const CAPABILITIES_MATRIX = [
   }
 ];
 
-// 5-part case studies
-const CASE_STUDIES = [
-  {
-    id: "med-fluidics",
-    category: "Medical Devices & Fluidics",
-    title: "Portable Microfluidic Diagnostic Cartridge System",
-    problem: "A clinical startup required a high-precision, leak-proof microfluidic cassette capable of maintaining laminar flow under variable pressure without expensive injection mold tooling.",
-    approach: "Analysed fluidic shear forces, capillary action, and surface energy of biocompatible polymers from first principles before making CAD cuts.",
-    engineering: "Engineered ultra-tight tolerance channels (±25 microns), integrated laser-cut acrylic bonding layers with medical-grade silicone gaskets, and optimized assembly clamping pressure.",
-    prototype: "Fabricated an optical-grade functional SLA cassette paired with precision CNC-milled manifold brackets.",
-    outcome: "Zero fluid leakage across 150 test cycles; successfully validated blood plasma separation in under 4 minutes, allowing immediate seed funding approval.",
-    tag: "Validated In Lab"
-  },
-  {
-    id: "iot-enclosure",
-    category: "Electronics & Rugged Enclosures",
-    title: "IP67 Weatherproof Agri-Telemetry Field Node",
-    problem: "An agritech hardware company faced severe sensor failure due to thermal buildup and moisture ingress in high-humidity agricultural soil monitoring environments.",
-    approach: "Conducted thermodynamic heat dissipation simulation and moisture diffusion analysis based on climatic extremes.",
-    engineering: "Redesigned enclosure with a labyrinth gasket seal, integrated breathable ePTFE gore vent, optimized internal ribbing for structural impact, and drafted complete DFM drawings.",
-    prototype: "High-density UV-resistant FDM engineering prototype followed by polyurethane casting for pre-production field trials.",
-    outcome: "Achieved sustained IP67 rating during high-pressure submersion tests; internal temperature dropped by 7.4°C under full solar load.",
-    tag: "DFM Complete"
-  },
-  {
-    id: "deep-mechanism",
-    category: "Deep-Tech & Automation",
-    title: "Sub-Millimeter Robotic Precision Micro-Actuator",
-    problem: "Industrial automation team needed a zero-backlash planetary transmission with a custom gear ratio to fit inside an extremely constrained 45mm diameter envelope.",
-    approach: "Formulated gear tooth profile contact mechanics, torque loading, and stress concentrations using first-principles gear kinematics and FEA.",
-    engineering: "Selected custom-hardened alloy steels, applied GD&T standards for concentricity within 0.008mm, and generated multi-axis CNC CAM toolpaths.",
-    prototype: "Precision CNC milled housing with Wire-EDM wire-cut sun and planetary gear cluster.",
-    outcome: "Eliminated mechanical backlash completely (< 0.02 deg play); reduced unit weight by 32% while meeting target torque of 18 Nm.",
-    tag: "Zero Backlash Validated"
-  }
-];
-
 export default function PrototypingLab() {
   const intakeFormRef = useRef(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -317,7 +219,7 @@ export default function PrototypingLab() {
         </div>
       </div>
 
-      {/* 2. HERO SECTION (Mobile-First Layout) */}
+      {/* 2. HERO SECTION */}
       <section className="relative border-b border-border bg-gradient-to-b from-background via-bone/30 to-background py-10 sm:py-16 md:py-24 px-4 sm:px-6 md:px-10">
         <div className="mx-auto max-w-[1400px] relative z-10">
           
@@ -369,7 +271,7 @@ export default function PrototypingLab() {
                 </span>
               </div>
 
-              {/* High-Converting Finger-Friendly CTA Buttons */}
+              {/* Finger-Friendly CTA Buttons */}
               <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                 <button
                   onClick={scrollToForm}
@@ -491,7 +393,7 @@ export default function PrototypingLab() {
               </div>
             </div>
 
-            {/* 5 Technical Axioms (Clean Technical Matrix) */}
+            {/* 5 Technical Axioms */}
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 text-left">
               
               <div className="rounded-xl border border-ink-line/60 bg-ink p-4 flex flex-col justify-between">
@@ -809,62 +711,7 @@ export default function PrototypingLab() {
         </div>
       </section>
 
-      {/* 5. OUR APPROACH: 8-STEP PIPELINE */}
-      <section className="border-b border-border bg-bone py-14 sm:py-20 px-4 sm:px-6 md:px-10">
-        <div className="mx-auto max-w-[1400px]">
-          
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-            <span className="eyebrow text-accent font-semibold">OUR APPROACH</span>
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight mt-1">
-              DON'T PROTOTYPE BLINDLY.
-            </h2>
-            <p className="font-mono text-xs sm:text-sm uppercase tracking-wider text-primary font-bold mt-2">
-              Research Methodology + First-Principles Engineering
-            </p>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-3 leading-relaxed">
-              Every prototype should answer a question. Our methodology combines research-based problem understanding with first-principles engineering to identify critical assumptions, evaluate possible solutions, and validate technical decisions before fabrication.
-            </p>
-          </div>
-
-          {/* 8 Step Flow Grid */}
-          <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {METHODOLOGY_STEPS.map((item, idx) => (
-              <div
-                key={item.step}
-                className="relative rounded-2xl border border-border bg-card p-5 sm:p-6 text-left transition-all duration-300 hover:shadow-md hover:border-primary flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="font-mono text-xl sm:text-2xl font-black text-foreground/30 group-hover:text-primary transition-colors">
-                      {item.step}
-                    </span>
-                    <span className="font-mono text-[10px] font-bold uppercase tracking-wider bg-bone px-2 py-0.5 rounded border border-border text-muted-foreground">
-                      {item.badge}
-                    </span>
-                  </div>
-                  
-                  <span className="eyebrow text-accent text-[10px] block mb-1">{item.tag}</span>
-                  <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-2">
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-border flex items-center justify-between text-[11px] font-mono text-muted-foreground">
-                  <span>Step {idx + 1} of 8</span>
-                  {idx < 7 && <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>}
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 6. ENGINEERING CAPABILITIES */}
+      {/* 5. ENGINEERING CAPABILITIES */}
       <section id="capabilities" className="border-b border-border bg-background py-14 sm:py-20 px-4 sm:px-6 md:px-10">
         <div className="mx-auto max-w-[1400px]">
           
@@ -925,7 +772,7 @@ export default function PrototypingLab() {
         </div>
       </section>
 
-      {/* 7. WHO WE BUILD WITH */}
+      {/* 6. WHO WE BUILD WITH */}
       <section className="border-b border-border bg-bone py-14 sm:py-20 px-4 sm:px-6 md:px-10">
         <div className="mx-auto max-w-[1400px]">
           
@@ -978,7 +825,7 @@ export default function PrototypingLab() {
         </div>
       </section>
 
-      {/* 8. WHERE WE BUILD (FOCUS AREAS) */}
+      {/* 7. WHERE WE BUILD (FOCUS AREAS) */}
       <section className="border-b border-border bg-background py-14 sm:py-20 px-4 sm:px-6 md:px-10">
         <div className="mx-auto max-w-[1400px]">
           
@@ -1053,7 +900,7 @@ export default function PrototypingLab() {
         </div>
       </section>
 
-      {/* 9. THE LAB & INFRASTRUCTURE */}
+      {/* 8. THE LAB & INFRASTRUCTURE */}
       <section className="border-b border-border bg-ink text-on-ink py-14 sm:py-20 px-4 sm:px-6 md:px-10">
         <div className="mx-auto max-w-[1400px]">
           
@@ -1125,88 +972,7 @@ export default function PrototypingLab() {
         </div>
       </section>
 
-      {/* 10. WHY SJCE-STEP? (6 Pillars) */}
-      <section className="border-b border-border bg-background py-14 sm:py-20 px-4 sm:px-6 md:px-10">
-        <div className="mx-auto max-w-[1400px]">
-          
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-            <span className="eyebrow text-primary font-semibold">THE ADVANTAGE</span>
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight mt-1">
-              WHY SJCE-STEP?
-            </h2>
-            <p className="font-mono text-xs sm:text-sm font-bold text-accent uppercase tracking-wider mt-2">
-              Engineering before fabrication.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            
-            <div className="rounded-2xl border border-border bg-card p-5 sm:p-6 text-left hover:border-primary transition-all">
-              <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3 font-mono font-bold text-sm">
-                01
-              </div>
-              <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-1.5">RESEARCH-LED</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                We begin by thoroughly understanding the problem, user requirements, existing solutions, and available physical evidence.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-5 sm:p-6 text-left hover:border-primary transition-all">
-              <div className="h-10 w-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-3 font-mono font-bold text-sm">
-                02
-              </div>
-              <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-1.5">FIRST-PRINCIPLES DRIVEN</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                We break engineering problems down to fundamental principles instead of relying only on expensive trial-and-error prototyping.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-5 sm:p-6 text-left hover:border-primary transition-all">
-              <div className="h-10 w-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 mb-3 font-mono font-bold text-sm">
-                03
-              </div>
-              <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-1.5">TEST BEFORE YOU COMMIT</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Critical assumptions can be tested on mockups and simulations before expensive fabrication and repeated physical tooling iterations.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-5 sm:p-6 text-left hover:border-primary transition-all">
-              <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3 font-mono font-bold text-sm">
-                04
-              </div>
-              <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-1.5">MANUFACTURING-AWARE</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                Our engineering approach factors in materials, tolerances (GD&T), assembly logistics, production processes, and industrial constraints.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-5 sm:p-6 text-left hover:border-primary transition-all">
-              <div className="h-10 w-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent mb-3 font-mono font-bold text-sm">
-                05
-              </div>
-              <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-1.5">END-TO-END SUPPORT</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                From problem definition and engineering design to prototyping, laboratory validation, BOM drafting, and MVP development.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-5 sm:p-6 text-left hover:border-primary transition-all">
-              <div className="h-10 w-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 mb-3 font-mono font-bold text-sm">
-                06
-              </div>
-              <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-1.5">ECOSYSTEM CONNECTED</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                The lab operates within the broader SJCE-STEP innovation ecosystem, providing access to technical infrastructure, mentorship, and grants.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* 11. INDUSTRY COLLABORATIONS & PARTNER LOGOS */}
+      {/* 9. INDUSTRY COLLABORATIONS & PARTNER LOGOS */}
       <section className="border-b border-border bg-bone py-14 sm:py-20 px-4 sm:px-6 md:px-10">
         <div className="mx-auto max-w-[1400px]">
           
@@ -1310,112 +1076,7 @@ export default function PrototypingLab() {
         </div>
       </section>
 
-      {/* 12. PROJECTS & CASE STUDIES (Rigorous 5-Part Framework) */}
-      <section className="border-b border-border bg-background py-14 sm:py-20 px-4 sm:px-6 md:px-10">
-        <div className="mx-auto max-w-[1400px]">
-          
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-10 sm:mb-16 text-left">
-            <div>
-              <span className="eyebrow text-primary font-semibold">VALIDATED WORK</span>
-              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight mt-1">
-                PROJECTS & CASE STUDIES
-              </h2>
-              <p className="font-mono text-xs sm:text-sm font-bold text-accent uppercase tracking-wider mt-2">
-                REAL PROBLEMS. ENGINEERED SOLUTIONS.
-              </p>
-            </div>
-            <div>
-              <Link
-                to="/projects"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-xs font-bold font-mono uppercase tracking-wider text-foreground hover:border-primary hover:text-primary transition-colors text-center"
-              >
-                View All Case Studies →
-              </Link>
-            </div>
-          </div>
-
-          <div className="space-y-6 sm:space-y-8">
-            {CASE_STUDIES.map((study) => (
-              <div
-                key={study.id}
-                className="rounded-2xl border border-border bg-card p-5 sm:p-8 text-left transition-all hover:shadow-lg hover:border-primary/50"
-              >
-                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-4 mb-5">
-                  <div>
-                    <span className="font-mono text-xs font-bold text-primary uppercase tracking-wider">
-                      {study.category}
-                    </span>
-                    <h3 className="font-display text-lg sm:text-2xl font-bold text-foreground mt-0.5">
-                      {study.title}
-                    </h3>
-                  </div>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 font-mono text-xs font-semibold text-emerald-600">
-                    <Check className="h-3 w-3" /> {study.tag}
-                  </span>
-                </div>
-
-                <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 text-xs">
-                  
-                  {/* 1. Problem */}
-                  <div className="rounded-xl bg-bone p-4 border border-border">
-                    <p className="font-mono font-bold text-[11px] text-red-600 uppercase tracking-wider mb-1.5">
-                      01. THE PROBLEM
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {study.problem}
-                    </p>
-                  </div>
-
-                  {/* 2. Approach */}
-                  <div className="rounded-xl bg-bone p-4 border border-border">
-                    <p className="font-mono font-bold text-[11px] text-accent uppercase tracking-wider mb-1.5">
-                      02. THE APPROACH
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {study.approach}
-                    </p>
-                  </div>
-
-                  {/* 3. Engineering */}
-                  <div className="rounded-xl bg-bone p-4 border border-border">
-                    <p className="font-mono font-bold text-[11px] text-primary uppercase tracking-wider mb-1.5">
-                      03. THE ENGINEERING
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {study.engineering}
-                    </p>
-                  </div>
-
-                  {/* 4. Prototype */}
-                  <div className="rounded-xl bg-bone p-4 border border-border">
-                    <p className="font-mono font-bold text-[11px] text-foreground uppercase tracking-wider mb-1.5">
-                      04. THE PROTOTYPE
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {study.prototype}
-                    </p>
-                  </div>
-
-                  {/* 5. Outcome */}
-                  <div className="rounded-xl bg-emerald-500/10 p-4 border border-emerald-500/20 sm:col-span-2 lg:col-span-1">
-                    <p className="font-mono font-bold text-[11px] text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-1.5">
-                      05. THE OUTCOME
-                    </p>
-                    <p className="text-foreground leading-relaxed font-medium">
-                      {study.outcome}
-                    </p>
-                  </div>
-
-                </div>
-
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 13. HIGH-CONVERTING PROJECT INTAKE / SCOPING ENGINE */}
+      {/* 10. HIGH-CONVERTING PROJECT INTAKE / SCOPING ENGINE */}
       <section ref={intakeFormRef} id="start-project" className="border-b border-border bg-ink text-on-ink py-14 sm:py-20 px-4 sm:px-6 md:px-10">
         <div className="mx-auto max-w-[1200px]">
           
@@ -1626,7 +1287,7 @@ export default function PrototypingLab() {
         </div>
       </section>
 
-      {/* 14. FINAL HIGH-CONVERTING CTA BANNER */}
+      {/* 11. FINAL HIGH-CONVERTING CTA BANNER */}
       <section className="bg-gradient-to-r from-primary via-violet-800 to-indigo-900 text-white py-14 sm:py-20 px-4 sm:px-6 md:px-10 text-center relative overflow-hidden">
         <div className="mx-auto max-w-[1000px] relative z-10">
           <span className="eyebrow text-accent font-semibold tracking-widest block mb-2">
