@@ -11,11 +11,11 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-4">
             <Link to="/" className="cursor-pointer">
               <img
-                src="/assets/full whitee-bgremove.png"
+                src="/assets/sjcestepwhite.png"
                 alt="SJCE-STEP"
                 width="160"
                 height="80"
-                className="opacity-90 object-contain w-32"
+                className="opacity-95 object-contain w-36"
               />
             </Link>
             <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-white">

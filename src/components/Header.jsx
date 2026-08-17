@@ -27,11 +27,11 @@ export default function Header() {
         {/* Logo and Lab Sub-brand */}
         <Link to="/" className="flex items-center gap-3 cursor-pointer" aria-label="Hardware Lab Home">
           <img
-            src="/assets/sjce-step-logo.png"
+            src="/assets/favicon.ico"
             alt="SJCE-STEP"
-            width="180"
-            height="90"
-            className="w-24 md:w-32 object-contain"
+            width="40"
+            height="40"
+            className="w-8 h-8 sm:w-10 sm:h-10 object-contain rounded-md"
           />
           <div className="h-6 w-[1px] bg-border hidden sm:block"></div>
           <span className="hidden sm:block font-mono text-[10px] font-bold tracking-[0.12em] text-muted-foreground uppercase leading-none">
