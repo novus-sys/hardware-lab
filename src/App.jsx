@@ -7,6 +7,7 @@ import LabCapabilities from './pages/LabCapabilities'
 import ProgramsAccess from './pages/ProgramsAccess'
 import ProjectsImpact from './pages/ProjectsImpact'
 import AboutContact from './pages/AboutContact'
+import PrototypingLab from './pages/PrototypingLab'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/prototyping-lab" element={<PrototypingLab />} />
+            <Route path="/nidhi-prayas-shala" element={<PrototypingLab />} />
+            <Route path="/landing" element={<PrototypingLab />} />
             <Route path="/lab" element={<LabCapabilities />} />
             <Route path="/programs" element={<ProgramsAccess />} />
             <Route path="/projects" element={<ProjectsImpact />} />

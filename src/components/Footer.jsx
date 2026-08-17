@@ -36,18 +36,23 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3.5">
               <li>
+                <Link to="/prototyping-lab" className="text-sm font-semibold text-accent transition-colors hover:text-white hover:underline cursor-pointer">
+                  Prototyping Lab (PRAYAS)
+                </Link>
+              </li>
+              <li>
                 <Link to="/lab" className="text-sm font-semibold transition-colors hover:text-white hover:underline cursor-pointer">
                   Lab & Capabilities
                 </Link>
               </li>
               <li>
                 <Link to="/programs" className="text-sm font-semibold transition-colors hover:text-white hover:underline cursor-pointer">
-                  Programs & Access
+                  Programs & Training
                 </Link>
               </li>
               <li>
                 <Link to="/projects" className="text-sm font-semibold transition-colors hover:text-white hover:underline cursor-pointer">
-                  Projects & Impact
+                  Projects & Case Studies
                 </Link>
               </li>
               <li>

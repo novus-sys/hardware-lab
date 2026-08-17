@@ -4,9 +4,10 @@ import ScrambledText from './ScrambledText'
 
 const NAV_ITEMS = [
   { name: 'Home', path: '/' },
-  { name: 'Lab & Capabilities', path: '/lab' },
-  { name: 'Programs & Access', path: '/programs' },
-  { name: 'Projects & Impact', path: '/projects' },
+  { name: 'Prototyping Lab', path: '/prototyping-lab' },
+  { name: 'Capabilities', path: '/lab' },
+  { name: 'Programs', path: '/programs' },
+  { name: 'Projects', path: '/projects' },
   { name: 'About & Contact', path: '/about' }
 ];
 
